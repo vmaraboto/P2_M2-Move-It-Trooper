@@ -406,6 +406,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  minX: -5
+  maxX: 5
+  minY: -5
+  maxY: 5
+  teleport: 32
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
