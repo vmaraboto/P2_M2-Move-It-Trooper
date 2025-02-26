@@ -8,12 +8,15 @@ public class Movement : MonoBehaviour
     // Speed of Movement
     public float speed = 5f;
 
+    // Minimun and maximum values of x
     public float minX;
     public float maxX;
 
+    // Minimum and maximum values of y
     public float minY;
     public float maxY;
 
+    // KeyCode for teleport
     public KeyCode teleport;
 
     // Start is called before the first frame update
@@ -64,6 +67,7 @@ public class Movement : MonoBehaviour
         Vector2 movePosition = new Vector2(moveX, moveY).normalized;
         transform.position += (Vector3)movePosition * speed * Time.deltaTime;
 
+        // Key detection for teleport
         if (Input.GetKeyDown(teleport))
         {
             Vector3 randomPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 7);
